@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#03A9F4</color>
+    <color name="colorPrimaryDark">#04608B</color>
+    <color name="colorAccent">#FF8E00</color>
+    <color name="white">#FFFFFF</color>
+    <color name="home_new_car_btn">#036999</color>
+    <color name="home_used_car_btn">#0278af</color>
+    <color name="home_motorcycle_btn">#0281bc</color>
+    <color name="home_articles_btn">#028dce</color>
+    <color name="home_more_btn">#0297de</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_white">#FFFFFF</color>
+    <color name="text_secondary">#757575</color>
+    <color name="window_bg">#f4f4f4</color>
+    <color name="default_circle_indicator_stroke_color">#FFDDDDDD</color>
+    <color name="default_circle_indicator_fill_color">#FFFFFFFF</color>
+    <color name="default_circle_indicator_page_color">#00000000</color>
+    <color name="unselected_indicator">#757575</color>
+    <color name="selected_indicator">#FF8E00</color>
+</resources>

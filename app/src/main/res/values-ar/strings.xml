@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">ContactKotlin</string>
+    <string name="new_cars">جديد</string>
+    <string name="used_cars">مستعمل</string>
+    <string name="motorcycle">موتوسيكلات</string>
+    <string name="articles">مقالات</string>
+    <string name="more">المزيد</string>
+    <string name="home_search_hint">مثال: أودي أو أودي A3</string>
+    <string name="popular">منتشر</string>
+    <string name="latest">الأحدث</string>
+    <string name="upcoming">القادم</string>
+    <string name="home_new_cars_title">سيارات جديدة مميزة</string>
+    <string name="home_used_cars_title">سيارات مستعملة في حدود ميزانيتك</string>
+    <string name="article_section_title">مقالات مميزة</string>
+    <string name="show_all_cars">أظهر الكل</string>
+    <string name="show_all_articles">أقرا الكل</string>
+    <string name="latest_articles">أحدث المقالات</string>
+    <string name="car_title">%s:%s</string>
+    <string name="car_price">%.2f ج.م</string>
+</resources>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">ContactKotlin</string>
+    <string name="new_cars">New Cars</string>
+    <string name="used_cars">Used Cars</string>
+    <string name="motorcycle">Motorcycle</string>
+    <string name="articles">Articles</string>
+    <string name="more">More</string>
+    <string name="home_search_hint">e.g. Audi or Audi A3</string>
+    <string name="popular">Popular</string>
+    <string name="latest">Latest</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="home_new_cars_title">Featured new cars</string>
+    <string name="home_used_cars_title">Used cars in your budget</string>
+    <string name="article_section_title">Featured article</string>
+    <string name="show_all_cars">Show all Cars</string>
+    <string name="show_all_articles">Show all articles</string>
+    <string name="latest_articles">Latest articles</string>
+    <string name="car_title">%s:%s</string>
+    <string name="car_price">$%.2f</string>
+</resources>

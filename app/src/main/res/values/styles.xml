@@ -1,0 +1,105 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="BaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/window_bg</item>
+    </style>
+
+    <style name="AppTheme" parent="BaseTheme" />
+
+    <style name="ImageButtonStyle">
+
+        <item name="android:background">@null</item>
+
+    </style>
+
+    <style name="ButtonNoBG">
+
+        <item name="android:background">@drawable/btn_no_bg</item>
+        <item name="android:textColor">@color/colorAccent</item>
+
+    </style>
+
+    <style name="TextHomeSlogan">
+
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:lines">2</item>
+        <item name="android:ellipsize">end</item>
+
+    </style>
+
+    <style name="TextOneLine">
+
+        <item name="android:lines">1</item>
+        <item name="android:ellipsize">end</item>
+
+    </style>
+
+    <style name="TextOneLine.SectionHeader" parent="TextOneLine">
+
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">20sp</item>
+
+    </style>
+
+    <style name="TextOneLine.Small" parent="TextOneLine">
+
+        <item name="android:textSize">12sp</item>
+
+    </style>
+
+    <style name="TextOneLine.Medium" parent="TextOneLine">
+
+        <item name="android:textSize">14sp</item>
+
+    </style>
+
+    <style name="TextOneLine.Small.Accent" parent="TextOneLine.Small">
+
+        <item name="android:textColor">@color/colorAccent</item>
+
+    </style>
+
+    <style name="TextOneLine.Small.Primary" parent="TextOneLine.Small">
+
+        <item name="android:textColor">@color/text_primary</item>
+
+    </style>
+
+    <style name="TextOneLine.Small.Secondary" parent="TextOneLine.Small">
+
+        <item name="android:textColor">@color/text_secondary</item>
+
+    </style>
+
+    <style name="TextOneLine.Small.White" parent="TextOneLine.Small">
+
+        <item name="android:textColor">@color/text_white</item>
+
+    </style>
+
+    <style name="TextOneLine.Medium.Secondary" parent="TextOneLine.Medium">
+
+        <item name="android:textColor">@color/text_secondary</item>
+
+    </style>
+
+    <style name="TextOneLine.Medium.White" parent="TextOneLine.Medium">
+
+        <item name="android:textColor">@color/text_white</item>
+
+    </style>
+
+    <style name="TextOneLine.Medium.Primary" parent="TextOneLine.Medium">
+
+        <item name="android:textColor">@color/text_primary</item>
+
+    </style>
+
+</resources>

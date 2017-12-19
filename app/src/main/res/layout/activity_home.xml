@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:fitsSystemWindows="true">
+
+            <com.example.halim.contactkotlin.ui.activity.home.header.StickyHeaderView
+                android:id="@+id/stickyHeader"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/home_header_height"
+                android:minHeight="@dimen/home_header_action_height"
+                app:layout_scrollFlags="exitUntilCollapsed|scroll|snap" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/used_cars_section_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/articles_section_card">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/used_cars_section_title"
+                            style="@style/TextOneLine.SectionHeader"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/home_used_cars_title"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.example.halim.contactkotlin.ui.widget.CalligraphyDefaultTabLayout
+                            android:id="@+id/usedCarTabs"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/used_cars_section_title"
+                            app:layout_goneMarginTop="16dp" />
+
+                        <android.support.v4.view.ViewPager
+                            android:id="@+id/usedCarViewPager"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/home_car_ad_height"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/usedCarTabs" />
+
+                        <Button
+                            android:id="@+id/usedCarShowMore"
+                            style="@style/ButtonNoBG"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/show_all_cars"
+                            android:padding="4dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/usedCarViewPager" />
+
+                    </android.support.constraint.ConstraintLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/articles_section_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/new_cars_section_card">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/articles_section_title"
+                            style="@style/TextOneLine.SectionHeader"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/article_section_title"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <android.support.v4.view.ViewPager
+                            android:id="@+id/articlesRV"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/article_section_height"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/articles_section_title"
+                            app:layout_goneMarginTop="16dp" />
+
+                        <com.example.halim.contactkotlin.ui.adapter.pager.indicator.CirclePageIndicator
+                            android:id="@+id/articlesPagerIndicator"
+                            android:layout_width="0dp"
+                            android:layout_height="10dp"
+                            android:layout_marginBottom="4dp"
+                            android:layout_marginTop="8dp"
+                            app:fillColor="@color/selected_indicator"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/articlesRV"
+                            app:pageColor="@color/unselected_indicator"
+                            app:radius="3dp"
+                            app:strokeWidth="0dp" />
+
+                    </android.support.constraint.ConstraintLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/new_cars_section_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/new_cars_section_title"
+                            style="@style/TextOneLine.SectionHeader"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/home_new_cars_title"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.example.halim.contactkotlin.ui.widget.CalligraphyDefaultTabLayout
+                            android:id="@+id/newCarTabs"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/new_cars_section_title"
+                            app:layout_goneMarginTop="16dp" />
+
+                        <android.support.v4.view.ViewPager
+                            android:id="@+id/newCarViewPager"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/home_car_ad_height"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/newCarTabs" />
+
+                        <Button
+                            android:id="@+id/newCarsShowMore"
+                            style="@style/ButtonNoBG"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/show_all_cars"
+                            android:padding="4dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/newCarViewPager" />
+
+                    </android.support.constraint.ConstraintLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintTop_toBottomOf="@+id/used_cars_section_card"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/latest_articles_title"
+                            style="@style/TextOneLine.SectionHeader"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/latest_articles"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp"
+                            android:id="@+id/latestArticles"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            app:layout_constraintTop_toBottomOf="@+id/latest_articles_title"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"/>
+
+                        <Button
+                            android:id="@+id/articlesShowMore"
+                            style="@style/ButtonNoBG"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/show_all_articles"
+                            android:padding="4dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/latestArticles" />
+
+                    </android.support.constraint.ConstraintLayout>
+                </android.support.v7.widget.CardView>
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <android.support.design.internal.NavigationMenuView
+        android:id="@+id/navigationMenu"
+        android:layout_width="@dimen/navigation_menu_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/text_white" />
+
+</android.support.v4.widget.DrawerLayout>

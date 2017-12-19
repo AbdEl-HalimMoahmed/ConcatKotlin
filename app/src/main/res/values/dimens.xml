@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="home_header_height">445dp</dimen>
+    <dimen name="home_logo_size">112dp</dimen>
+    <dimen name="home_header_action_btn_size">56dp</dimen>
+    <dimen name="home_header_action_height">84dp</dimen>
+    <dimen name="home_header_action_btn_margin">28dp</dimen>
+    <dimen name="home_search_height">48dp</dimen>
+    <dimen name="navigation_menu_width">256dp</dimen>
+    <dimen name="home_car_ad_height">254dp</dimen>
+    <dimen name="home_car_ad_image_height">164dp</dimen>
+    <dimen name="article_section_height">216dp</dimen>
+    <dimen name="default_circle_indicator_stroke_width">1dp</dimen>
+    <dimen name="default_circle_indicator_radius">3dp</dimen>
+    <dimen name="adapter_article_image_width">76dp</dimen>
+    <dimen name="home_adapter_article_height">96dp</dimen>
+
+</resources>
