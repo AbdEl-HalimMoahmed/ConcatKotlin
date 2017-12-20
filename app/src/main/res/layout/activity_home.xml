@@ -17,7 +17,7 @@
             android:background="@android:color/transparent"
             android:fitsSystemWindows="true">
 
-            <com.example.halim.contactkotlin.ui.activity.home.header.StickyHeaderView
+            <com.sarmady.contactkotlin.ui.activity.home.header.StickyHeaderView
                 android:id="@+id/stickyHeader"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/home_header_height"
@@ -61,7 +61,7 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                        <com.example.halim.contactkotlin.ui.widget.CalligraphyDefaultTabLayout
+                        <com.sarmady.contactkotlin.ui.widget.CalligraphyDefaultTabLayout
                             android:id="@+id/usedCarTabs"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
@@ -130,7 +130,7 @@
                             app:layout_constraintTop_toBottomOf="@+id/articles_section_title"
                             app:layout_goneMarginTop="16dp" />
 
-                        <com.example.halim.contactkotlin.ui.adapter.pager.indicator.CirclePageIndicator
+                        <com.sarmady.contactkotlin.ui.adapter.pager.indicator.CirclePageIndicator
                             android:id="@+id/articlesPagerIndicator"
                             android:layout_width="0dp"
                             android:layout_height="10dp"
@@ -173,7 +173,7 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                        <com.example.halim.contactkotlin.ui.widget.CalligraphyDefaultTabLayout
+                        <com.sarmady.contactkotlin.ui.widget.CalligraphyDefaultTabLayout
                             android:id="@+id/newCarTabs"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
