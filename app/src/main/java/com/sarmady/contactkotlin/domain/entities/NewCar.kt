@@ -15,5 +15,5 @@ class NewCar(id: Long = 0,
              specs: List<Map<String, Any>>? = null,
              url: String? = null,
              val colors: List<String>? = null,
-             images: List<Image?>? = null) : Car(id, desc, makeYear, price, makeId, modelId,
+             images: List<Image>? = null) : Car(id, desc, makeYear, price, makeId, modelId,
         makeName, modelName, specs, url, images), Parcelable

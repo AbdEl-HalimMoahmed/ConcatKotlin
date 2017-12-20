@@ -6,7 +6,7 @@ import io.reactivex.Observable
 
 interface ArticleRepository {
 
-    fun listArticles(pageNum: Int): Observable<List<Article?>>
+    fun listArticles(pageNum: Int): Observable<List<Article>>
 
     fun getArticle(id: Long): Observable<Article>
 }

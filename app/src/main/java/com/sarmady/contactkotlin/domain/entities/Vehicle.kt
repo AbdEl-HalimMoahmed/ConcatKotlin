@@ -14,7 +14,7 @@ open class Vehicle(id: Long,
                    val modelName: String?,
                    val specs: List<Map<String, Any>>?,
                    val url: String?,
-                   val images: List<Image?>?) : Entity(id), Parcelable {
+                   val images: List<Image>?) : Entity(id), Parcelable {
 
     constructor(parcel: Parcel) : this(
             parcel.readLong(),

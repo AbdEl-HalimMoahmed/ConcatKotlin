@@ -69,7 +69,7 @@ class RepositoryModule {
 
     @Provides
     @AppScope
-    fun provideVehicleImageMapper(): Mapper<VehicleImage, ImageEntity> = VechileIMageMapper()
+    fun provideVehicleImageMapper(): Mapper<VehicleImage, ImageEntity> = VehicleImageMapper()
 
     @Provides
     @AppScope

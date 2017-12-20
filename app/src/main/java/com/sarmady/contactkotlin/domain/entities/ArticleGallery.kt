@@ -1,7 +1,7 @@
 package com.sarmady.contactkotlin.domain.entities
 
 class ArticleGallery(private val cover: Image? = null,
-                     private val images: List<Image?>? = null) {
+                     private val images: List<Image>? = null) {
 
     val imagesSmall: List<String?>?
         get() = getImages(0)
@@ -16,6 +16,6 @@ class ArticleGallery(private val cover: Image? = null,
         if (images == null)
             return null
 
-        return images.map { if (size == 0) it?.small else it?.large }
+        return images.map { if (size == 0) it.small else it.large }
     }
 }

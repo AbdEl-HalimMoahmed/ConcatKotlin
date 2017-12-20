@@ -8,6 +8,8 @@ apply plugin: 'kotlin-kapt'
 
 apply plugin: 'org.jetbrains.kotlin.android.extensions'
 
+apply plugin: 'de.mannodermaus.android-junit5'
+
 android {
     compileSdkVersion parent.ext.android_compile_sdk_version
     buildToolsVersion parent.ext.android_build_tools_version
@@ -76,9 +78,8 @@ dependencies {
 
     implementation "uk.co.chrisjenx:calligraphy:2.2.0"
 
-    testImplementation 'junit:junit:4.12'
+    testImplementation junit5.unitTests()
     androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.1', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 }

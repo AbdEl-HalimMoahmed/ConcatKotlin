@@ -9,8 +9,8 @@ import io.reactivex.Observable
 class CloudArticleDataSet(private val articleService: ArticleService) : ArticleDataSet {
 
     override fun listArticles(pageNum: Int): Observable<List<Article>> =
-            articleService.listArticles(pageNum).map { it.articles }
+            articleService.listArticles(pageNum).map { it.articles?.mapNotNull { it } ?: arrayListOf() }
 
     override fun getArticleDetails(id: Long): Observable<Article> =
-            articleService.getArticleDetails(id).map { it.article }
+            articleService.getArticleDetails(id).map { it.article ?: Article() }
 }

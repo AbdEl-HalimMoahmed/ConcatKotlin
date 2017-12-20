@@ -6,6 +6,6 @@ import com.sarmady.contactkotlin.domain.entities.ArticleAuthor as AuthorEntity
 
 class ArticleAuthorMapper : Mapper<AuthorModel, AuthorEntity>() {
 
-    override fun transform(from: AuthorModel?): AuthorEntity =
-            AuthorEntity(from?.name)
+    override fun transform(from: AuthorModel?) = from?.let { AuthorEntity(from.name) }
+
 }

@@ -13,5 +13,5 @@ class UsedCar(id: Long = 0,
               modelName: String? = null,
               specs: List<Map<String, Any>>? = null,
               url: String? = null,
-              images: List<Image?>? = null) : Car(id, desc, makeYear, price, makeId, modelId,
+              images: List<Image>? = null) : Car(id, desc, makeYear, price, makeId, modelId,
         makeName, modelName, specs, url, images), Parcelable

@@ -6,6 +6,6 @@ import com.sarmady.contactkotlin.domain.entities.ArticleQuote as QuoteEntity
 
 class ArticleQuoteMapper : Mapper<QuoteModel, QuoteEntity>() {
 
-    override fun transform(from: QuoteModel?): QuoteEntity =
-            QuoteEntity(from?.quote)
+    override fun transform(from: QuoteModel?) = from?.let { QuoteEntity(from.quote) }
+
 }

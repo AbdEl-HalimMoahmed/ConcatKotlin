@@ -4,4 +4,4 @@ import com.sarmady.contactkotlin.data.model.Article
 import com.google.gson.annotations.SerializedName
 
 
-class ArticleResponse(@SerializedName("model") val article: Article)
+class ArticleResponse(@SerializedName("model") val article: Article?)

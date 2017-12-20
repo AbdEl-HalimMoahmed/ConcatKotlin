@@ -13,6 +13,5 @@ open class Car(id: Long,
                modelName: String?,
                specs: List<Map<String, Any>>?,
                url: String?,
-               images: List<Image?>?) :
-        Vehicle(id, desc, makeYear, price, makeId, modelId,
+               images: List<Image>?) : Vehicle(id, desc, makeYear, price, makeId, modelId,
                 makeName, modelName, specs, url, images), Parcelable

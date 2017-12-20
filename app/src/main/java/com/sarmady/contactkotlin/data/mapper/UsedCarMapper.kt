@@ -8,7 +8,8 @@ import com.sarmady.contactkotlin.domain.entities.UsedCar as UsedCarEntity
 
 class UsedCarMapper(private val imageMapper: Mapper<VehicleImage, Image>) : Mapper<UsedCarModel, UsedCarEntity>() {
 
-    override fun transform(from: UsedCarModel?): UsedCarEntity?
-            = UsedCarEntity(from?.id ?: -1L, "", from?.makeYear ?: 0, from?.price ?: 0.0, from?.makeId ?: -1L, from?.modelId ?: -1L,
-            from?.makeName, from?.modelName, arrayListOf(), from?.url, imageMapper.transform(from?.images))
+    override fun transform(from: UsedCarModel?) = from?.let {
+        UsedCarEntity(from.id, "", from.makeYear, from.price, from.makeId, from.modelId,
+                from.makeName, from.modelName, arrayListOf(), from.url, imageMapper.transform(from.images))
+    }
 }

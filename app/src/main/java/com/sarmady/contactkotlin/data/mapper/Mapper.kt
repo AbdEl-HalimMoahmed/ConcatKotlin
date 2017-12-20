@@ -3,9 +3,9 @@ package com.sarmady.contactkotlin.data.mapper
 
 // Clashes with dagger 2
 @Suppress("AddVarianceModifier")
-abstract class Mapper<From, To> {
+abstract class Mapper<From: Any, To: Any> {
 
     abstract fun transform(from: From?) : To?
 
-    fun transform(from: List<From?>?) = from?.map { transform(it) }
+    fun transform(from: List<From?>?):List<To>? = from?.mapNotNull { transform(it) }
 }
