@@ -1,17 +1,26 @@
 package com.sarmady.contactkotlin.data.mapper
 
+import com.sarmady.contactkotlin.di.data.mapper.MapperComponent
 import org.junit.jupiter.api.Assertions
+import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.Test
 import javax.inject.Inject
 
 
-abstract class MapperContact<From : Any, To : Any> {
+abstract class MapperTestContract<From : Any, To : Any> {
+
+//    @get:Rule
+//    val daggerMockRule = DaggerMock.rule<MapperComponent>(MapperModule()) {
+//        set { mapper = injectMapper(it) }
+//    }
 
     abstract fun getFromValidValue(): From
 
-    abstract fun getFromInvakidValue(): From
+    abstract fun getFromInvalidValue(): From
 
     abstract fun getToValidValue(): To
+
+//    abstract fun injectMapper(component: MapperComponent): Mapper<From, To>
 
     @Inject
     lateinit var mapper: Mapper<From, To>
@@ -27,6 +36,7 @@ abstract class MapperContact<From : Any, To : Any> {
     @Test
     fun nullFromTransformsToNullTo() {
         val from: From? = null
+
         Assertions.assertNull(mapper.transform(from))
     }
 }

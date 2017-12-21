@@ -53,12 +53,11 @@ class HomePresenter(private val listArticlesUseCase: ListArticlesUseCase,
                 })
 
         listArticlesUseCase.execute(ArticleUseCase.Param.ListArticlesParam(1),
-                object : SimpleDisposableObserver<List<Article?>>() {
-                    override fun onNext(t: List<Article?>) {
-                        if (t.isNotEmpty() && t[0] != null) {
-                            val list = t.filter { it != null }.map { it as Article }
-                            view.showFeaturedArticles(list)
-                            view.showLatestArticles(list)
+                object : SimpleDisposableObserver<List<Article>>() {
+                    override fun onNext(t: List<Article>) {
+                        if (t.isNotEmpty()) {
+                            view.showFeaturedArticles(t)
+                            view.showLatestArticles(t)
                         }
                     }
 

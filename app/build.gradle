@@ -79,6 +79,11 @@ dependencies {
     implementation "uk.co.chrisjenx:calligraphy:2.2.0"
 
     testImplementation junit5.unitTests()
+    testCompileOnly junit5.unitTestsRuntime()
+    testImplementation "com.google.dagger:dagger:$dagger_version"
+    kaptTest "com.google.dagger:dagger-android-processor:$dagger_version"
+    kaptTest "com.google.dagger:dagger-compiler:$dagger_version"
+    testImplementation 'com.github.fabioCollini.daggermock:daggermock-kotlin:0.8.2'
     androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.1', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })

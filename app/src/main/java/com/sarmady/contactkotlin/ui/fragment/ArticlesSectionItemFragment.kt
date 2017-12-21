@@ -9,6 +9,7 @@ import com.sarmady.contactkotlin.App
 import com.sarmady.contactkotlin.R
 import com.sarmady.contactkotlin.domain.entities.Article
 import com.sarmady.contactkotlin.ui.util.loadUrl
+import com.sarmady.contactkotlin.ui.util.setLayoutDirection
 import kotlinx.android.synthetic.main.adapter_article_card.*
 
 
