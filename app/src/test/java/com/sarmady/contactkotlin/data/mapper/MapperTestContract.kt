@@ -1,5 +1,6 @@
 package com.sarmady.contactkotlin.data.mapper
 
+import com.sarmady.contactkotlin.TestLifecycleLogger
 import com.sarmady.contactkotlin.di.data.mapper.DaggerMapperComponent
 import com.sarmady.contactkotlin.di.data.mapper.MapperComponent
 import org.junit.jupiter.api.Assertions
@@ -9,7 +10,7 @@ import org.junit.jupiter.api.TestInstance
 import javax.inject.Inject
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-abstract class MapperTestContract<From : Any, To : Any> {
+abstract class MapperTestContract<From : Any, To : Any>: TestLifecycleLogger {
 
     abstract fun getFromValidValue(): From
 

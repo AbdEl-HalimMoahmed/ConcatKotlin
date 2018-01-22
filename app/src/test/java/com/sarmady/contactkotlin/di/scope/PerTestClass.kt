@@ -1,4 +1,4 @@
-package com.sarmady.contactkotlin.di.qualifier
+package com.sarmady.contactkotlin.di.scope
 
 import javax.inject.Scope
 

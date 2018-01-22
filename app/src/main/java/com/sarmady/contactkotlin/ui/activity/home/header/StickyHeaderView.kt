@@ -13,12 +13,12 @@ import android.view.View
 import android.view.ViewTreeObserver
 import android.view.animation.AccelerateInterpolator
 import android.widget.FrameLayout
-import com.sarmady.contactkotlin.R
-import com.sarmady.contactkotlin.ui.animator.RatioAnimator
 import com.facebook.rebound.SimpleSpringListener
 import com.facebook.rebound.Spring
 import com.facebook.rebound.SpringConfig
 import com.facebook.rebound.SpringSystem
+import com.sarmady.contactkotlin.R
+import com.sarmady.contactkotlin.ui.animator.RatioAnimator
 import kotlinx.android.synthetic.main.widget_home_header.view.*
 
 

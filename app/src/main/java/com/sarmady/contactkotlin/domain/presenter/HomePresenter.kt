@@ -38,7 +38,7 @@ class HomePresenter(private val listArticlesUseCase: ListArticlesUseCase,
                     }
                 })
 
-        usedCarDetails.execute(VehicleUseCase.Params.GetVehicleDetails(2888707),
+        usedCarDetails.execute(VehicleUseCase.Params.GetVehicleDetails(2923961),
                 object : SimpleDisposableObserver<UsedCar>() {
 
                     override fun onNext(t: UsedCar) {

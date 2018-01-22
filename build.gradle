@@ -1,8 +1,8 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    ext.kotlin_version = '1.1.60'
-    ext.gradle_build_version = '3.1.0-alpha04'
+    ext.kotlin_version = '1.2.10'
+    ext.gradle_build_version = '3.1.0-alpha07'
     ext.junit_plugin_version = '1.0.22'
     repositories {
         google()
@@ -22,6 +22,7 @@ buildscript {
 }
 
 allprojects {
+
     repositories {
         google()
         jcenter()
@@ -50,6 +51,8 @@ allprojects {
         disk_lru_version = '2.0.2'
 
         junit_version = "5.0.2"
+
+        mock_maker = "mock-maker-inline"
     }
 }
 
