@@ -1,7 +1,7 @@
 package com.sarmady.contactkotlin.di.qualifier
 
-import javax.inject.Qualifier
+import javax.inject.Scope
 
 
-@Qualifier
+@Scope
 annotation class PerTestClass
