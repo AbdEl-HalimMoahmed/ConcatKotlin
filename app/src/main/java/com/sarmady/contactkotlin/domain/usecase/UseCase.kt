@@ -16,7 +16,11 @@ abstract class UseCase<T, in Params>(val threadExecutor: ThreadExecutor,
     abstract fun buildUseCaseObservable(params: Params): Observable<T>
 
     fun execute(params: Params, observer: DisposableObserver<T>) {
-        disposables.add(buildUseCaseObservable(params)
+        var observable = buildUseCaseObservable(params)
+        if (observer is RetryDisposableObserver) {
+            observable = observer.setUpObservable(observable)
+        }
+        disposables.add(observable
                 .subscribeOn(Schedulers.from(threadExecutor))
                 .observeOn(uiExecutor.scheduler)
                 .subscribeWith(observer))

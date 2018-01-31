@@ -4,6 +4,7 @@ import com.sarmady.contactkotlin.domain.bus.Bus
 import com.sarmady.contactkotlin.domain.entities.Article
 import com.sarmady.contactkotlin.domain.entities.NewCar
 import com.sarmady.contactkotlin.domain.entities.UsedCar
+import com.sarmady.contactkotlin.domain.usecase.RetryDisposableObserver
 import com.sarmady.contactkotlin.domain.usecase.SimpleDisposableObserver
 import com.sarmady.contactkotlin.domain.usecase.article.ArticleUseCase
 import com.sarmady.contactkotlin.domain.usecase.article.ListArticlesUseCase
@@ -38,8 +39,8 @@ class HomePresenter(private val listArticlesUseCase: ListArticlesUseCase,
                     }
                 })
 
-        usedCarDetails.execute(VehicleUseCase.Params.GetVehicleDetails(2923961),
-                object : SimpleDisposableObserver<UsedCar>() {
+        usedCarDetails.execute(VehicleUseCase.Params.GetVehicleDetails(-22),
+                object : RetryDisposableObserver<UsedCar>() {
 
                     override fun onNext(t: UsedCar) {
                         view.showUsedCars(arrayListOf(t, t, t), "100-200")
@@ -47,8 +48,11 @@ class HomePresenter(private val listArticlesUseCase: ListArticlesUseCase,
                         view.showUsedCars(arrayListOf(t, t, t), "800-1200")
                     }
 
-                    override fun onError(e: Throwable) {
-                        e.printStackTrace()
+                    override fun onError(onRetry: () -> Unit, onClose: () -> Unit) {
+//                        view.showRetryDialog(onRetry, {
+//                            onClose()
+//                            view.closeView()
+//                        })
                     }
                 })
 

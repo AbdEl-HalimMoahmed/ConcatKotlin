@@ -5,6 +5,7 @@ import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.widget.LinearLayoutManager
 import android.view.MenuItem
+import com.afollestad.materialdialogs.MaterialDialog
 import com.sarmady.contactkotlin.App
 import com.sarmady.contactkotlin.R
 import com.sarmady.contactkotlin.domain.entities.Article
@@ -100,6 +101,28 @@ class HomeActivity : BaseActivity(), HomeView {
 
     override fun showLatestArticles(articles: List<Article>) {
         (latestArticles.adapter as HomeArticlesAdapter).addMore(articles)
+    }
+
+    override fun showRetryDialog(onRetry: () -> Unit, onClose: () -> Unit) {
+        runOnUiThread {
+            MaterialDialog.Builder(this)
+                    .content("Error")
+                    .positiveText("Retry")
+                    .negativeText("Close")
+                    .onPositive { dialog, _ ->
+                        onRetry()
+                        dialog.dismiss()
+                    }
+                    .onNegative { dialog, _ ->
+                        onClose()
+                        dialog.dismiss()
+                    }
+                    .show()
+        }
+    }
+
+    override fun closeView() {
+        finish()
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean =

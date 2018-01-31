@@ -78,6 +78,11 @@ dependencies {
 
     implementation "uk.co.chrisjenx:calligraphy:2.2.0"
 
+    implementation "cn.hikyson.godeye:godeye-core:$god_eye_version"
+    debugImplementation "cn.hikyson.godeye:godeye-monitor:$god_eye_version"
+    releaseImplementation "cn.hikyson.godeye:godeye-monitor-no-op:$god_eye_version"
+    implementation "cn.hikyson.godeye:godeye-toolbox:$god_eye_version"
+
     testImplementation junit5.unitTests()
     testCompileOnly junit5.unitTestsRuntime()
     testImplementation "com.google.dagger:dagger:$dagger_version"

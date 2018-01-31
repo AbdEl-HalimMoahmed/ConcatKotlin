@@ -3,6 +3,9 @@ package com.sarmady.contactkotlin
 import android.app.Activity
 import android.app.Application
 import android.app.Service
+import cn.hikyson.android.godeye.toolbox.crash.CrashFileProvider
+import cn.hikyson.godeye.core.GodEye
+import cn.hikyson.godeye.monitor.GodEyeMonitor
 import com.sarmady.contactkotlin.di.component.app.DaggerAppComponent
 import com.sarmady.contactkotlin.domain.entities.Arabic
 import com.sarmady.contactkotlin.domain.entities.Language
@@ -38,6 +41,10 @@ class App : Application(), HasActivityInjector, HasServiceInjector {
         getRegId()
 
         setFont()
+
+        // TODO Inject
+        GodEye.instance().installAll(this, CrashFileProvider(this))
+        GodEyeMonitor.work(this)
     }
 
     private fun setFont() {
@@ -48,7 +55,7 @@ class App : Application(), HasActivityInjector, HasServiceInjector {
                     .build())
     }
 
-    // Google RegID
+    // TODO get Google RegID (Service)
     private fun getRegId() {
     }
 
